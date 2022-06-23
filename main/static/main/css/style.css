@@ -1,0 +1,63 @@
+body
+{
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+html,body
+{
+    height: 100%;
+}
+
+.Page
+{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.UpContent, .DownContent, .MainContent
+{
+    border-style: dashed;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.UpContent
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.MainPageIcon
+{
+    transition: 0.5s ease-out;
+    width: 5%;
+    height: 5%;
+}
+
+.MainPageIcon:hover
+{
+    width: 6%;
+    height: 6%;
+    transform: rotate(360deg);
+}
+
+
+.MainContent
+{
+    flex: 1 1 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.DownContent
+{
+    text-align: center;
+    font-size: 32px;
+}
+
+
