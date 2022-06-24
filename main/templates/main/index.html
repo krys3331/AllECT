@@ -11,11 +11,17 @@
 <body>
     <div class=Page>
         <div class="UpContent">
-            <img class="MainPageIcon" src="{% static 'main/images/mainPage.png '%}" alt="YOY"/>
-            <div>ПК</div>
-            <div>Мейнфрейми</div>
-            <div>Смартфони</div>
-            <div></div>
+            <a href="{% url 'home' %}"><img class="MainPageIcon" src="{% static 'main/images/mainPage.png '%}" alt="YOY"/></a>
+            <div class="MainCathegorys">
+                <a href="">ПК</a>
+                <a href="">Мейнфрейми</a>
+                <a href="">Смартфони</a>
+                <a href="">Ігрові консолі</a>
+                
+               
+                
+            </div>
+            <img class="OtherIcon" src="{% static 'main/images/three_points.png '%}">
         </div>
         <div class="MainContent">
             {% block  MainContent%}
@@ -23,7 +29,7 @@
             {% endblock  %}
         </div>
         <div class="DownContent" style="color: white;">
-            НИЗКА
+            The source code is on github under the GPLv3 license.
         </div>
     </div>
    
