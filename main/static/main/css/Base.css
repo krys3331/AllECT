@@ -20,7 +20,6 @@ html,body
 
 .UpContent, .DownContent, .MainContent
 {
-    border-style: dashed;
     color: white;
     font-family: 'Times New Roman', Times, serif;
     
@@ -35,27 +34,30 @@ html,body
 {
     display: inline;
     width: 100%;
-    
+    position: fixed;
+    z-index: 100;
 }
 
 .MainCathegorys
 {
     display: inline;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
-.MainCathegorys > a > div
+.MainCathegorys > a
 {
     margin-left: 2%;
     margin-right: 2%;
-    transition: 0.3s ease-out;
+    transition: 0.3s ease;
     margin-top: 0.5%;
     font-size: 42px;
+    text-decoration: none;
+    color: white;
 
 }
 
 
-.MainCathegorys > a > div:hover
+.MainCathegorys > a:hover 
 {
    font-size: 44px;
 }
@@ -84,14 +86,36 @@ html,body
     float: right;
 }
 
+
+
 .MainContent
 {
     flex: 1 1 auto;
-    margin-top: 2%;
+    margin-top: 10%;
     margin-bottom: 2%;
-    
+    margin-left: 2%;
+    position: relative;
+    overflow: hidden;
 }
 
+.LeftContent
+{
+    position: fixed;
+    left: -20%;
+    top: 0%;
+    height: 100%;
+    width: 20%;
+    border-style: dotted;
+    opacity: 95%;
+    filter: blur(5px);
+    background-color: #0D8FAD;
+    transition: 0.3s ease-out;
+}
+
+.LeftContent:hover
+{
+    left:0%;
+}
 .DownContent
 {
     text-align: center;

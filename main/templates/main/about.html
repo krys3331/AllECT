@@ -1,7 +1,7 @@
-{% extends 'main/index.html' %}
+{% extends 'main/base.html' %}
 
-{% block main_p %}
-<div>
-    ABOUT INDEX
+{% block MainContent %}
+<div  style="font-size: 45px;">
+    {{about|linebreaks}}
 </div>
 {% endblock %}

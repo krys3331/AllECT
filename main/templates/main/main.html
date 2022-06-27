@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block link %} <link type="text/css" href="{% static 'main/css/Main.css' %}" rel="stylesheet" />{% endblock link %}
+
+{% block MainContent %}
+    <div>
+        <div class="Label">Архітектури</div>
+        <img class="Icon" src="{% static 'main/images/arch.png' %}"/>
+        <div class="BTN"></div>
+    </div>
+
+    <div>
+        <div class="Label">Процессори</div>
+        <img class="Icon" src="{% static 'main/images/Proc.png' %}"/>
+        <div class="BTN"> fdfds</div>
+
+    </div>
+
+    <div>
+        <div class="Label">Категорії</div>
+        <img class="Icon" src="{% static 'main/images/other.png' %}"/>
+        <div class="BTN">fdfds</div>
+    </div>
+
+
+{% endblock MainContent %}

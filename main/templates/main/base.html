@@ -5,31 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="{% static 'main/css/style.css' %}" rel="stylesheet"  />
-    <title>Головна сторінка</title>
+    <link type="text/css" href="{% static 'main/css/Base.css' %}" rel="stylesheet"  />
+    {% block link %}{% endblock link %}
+    <title>{{title}}</title>
 </head>
 <body>
     <div class=Page>
         <div class="UpContent">
             <a href="{% url 'home' %}"><img class="MainPageIcon" src="{% static 'main/images/mainPage.png '%}" alt="YOY"/></a>
             <div class="MainCathegorys">
-                <a href="">ПК</a>
-                <a href="">Мейнфрейми</a>
-                <a href="">Смартфони</a>
-                <a href="">Ігрові консолі</a>
-                
-               
-                
+                {% for m in menu %}
+                    <a href="{% url m.url_page %}">{{m.title}}</a>
+                {% endfor %}    
             </div>
             <img class="OtherIcon" src="{% static 'main/images/three_points.png '%}">
+            <div class="LeftContent">
+
+            </div>
         </div>
         <div class="MainContent">
             {% block  MainContent%}
-            авыаааыв
-            {% endblock  %}
+            
+            {% endblock MainContent %}
+            </div>
         </div>
         <div class="DownContent" style="color: white;">
-            The source code is on github under the GPLv3 license.
+            The source code is on github under the GPLv3 license
         </div>
     </div>
    
