@@ -1,0 +1,55 @@
+.Image
+{
+    width: 50%;
+}
+
+.Name
+{
+    font-size: 52px;
+    font-weight: bold;
+}
+
+.About 
+{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.Descr
+{
+    font-size: 24px;
+}
+
+.BTN
+{
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #0D8FAD;
+    width: 25%;
+    height: 20%;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.BTN:hover
+{
+    background-color: #0fb0d4;
+}
+
+.BTN > a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.Line
+{
+    min-height: 10%;
+    background-color: #10c4ec;
+    background-size: auto;
+    width: 100%;
+    margin-top: 5%;
+}

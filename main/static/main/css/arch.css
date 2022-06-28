@@ -1,0 +1,10 @@
+.Main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Main > div
+{
+    font-size: 32px;
+}

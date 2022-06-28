@@ -11,8 +11,22 @@
             {% for arch in  architectures %}
                 <div class="Arch">
                     <div class="Name">{{arch.name}}</div>
-                    <div class="Descr">{{arch.describe}}</div>
-                    <img class="Image" src="{{arch.photo.url}}" alt="">
+                    <div class="About">
+                        {% if arch.photo %}<img class="Image" src="{{arch.photo.url}}">{% endif %}
+                        <div class="Descr">{{arch.describe|truncatewords:20}}
+                            <div class="BTN">
+                                <a  href="{%url 'arch' arch.slug%}">
+                                    Переглянути
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    {% if not forloop.last %}
+                        <div class="Line">&nbsp;</div>
+                    {% endif %}
+                        
                 </div>
             {% endfor %}
 {% endblock MainContent %}

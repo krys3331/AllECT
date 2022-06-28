@@ -28,6 +28,9 @@ class Proccessor(models.Model):
     def __str__(self) -> str:
         return self.name
     
+    def get_absolute_url(self):
+        return reverse("process", kwargs={"slug": self.slug})
+    
 class Architecture(models.Model):
     slug = models.SlugField(unique=True, max_length=64, db_index=True, verbose_name="URL")
     name = models.CharField(max_length=16)
@@ -36,6 +39,9 @@ class Architecture(models.Model):
     
     def __str__(self) -> str:
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse("arch", kwargs={"slug": self.slug})
     
 class Cathegory(models.Model):
     slug = models.SlugField(unique=True, max_length=64, db_index=True, verbose_name="URL")

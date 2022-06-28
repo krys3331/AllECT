@@ -11,17 +11,17 @@ menu = [
 
 
 def Index(request):
-    return render(request, 'main/main.html', {'cathegorys' : Cathegory.objects.all(), 'menu':menu})
+    return render(request, 'main/main.html', {'menu':menu})
 
 
 def About(request):
     
     about = '''
     Сайт показує деякі технології в світі IT (ЕОМ, процессори, архітектури....)
-    Сайт зроблений за допомогою fraemwork Django
+    Сайт зроблений за допомогою Framework Django
     Source code - https://github.com/krys3331/AllECT
     '''
-    return render(request, 'main/about.html', {'cathegorys' : Cathegory.objects.all(), 'menu':menu, 'about':about})
+    return render(request, 'main/about.html', {'menu':menu, 'about':about})
 
 def ECT(request, slug):
     return get_object_or_404(ECT)
@@ -37,10 +37,11 @@ def ArchList(request):
     
     arch = Architecture.objects.all()
     
-    return render(request,'main/archlist.html', {'archl':arch})
+    return render(request,'main/archlist.html', {'menu':menu, 'archl':arch, })
 
 def Arch(request, slug):
-    return HttpResponse(f"ARCH:{slug}")
+    arch = get_object_or_404(Architecture, slug=slug)
+    return render(request,'main/arch.html', {'menu':menu, 'arch':arch})
 
 def ProcessorList(request):
     return HttpResponse("PROC LIST")
