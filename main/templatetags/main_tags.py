@@ -13,5 +13,5 @@ def get_architectures():
     return Architecture.objects.all()
 
 @register.simple_tag()
-def get_cathegorys():
+def get_ects():
     return Cathegory.objects.all()

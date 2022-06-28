@@ -101,11 +101,10 @@ html,body
 .LeftContent
 {
     position: fixed;
-    left: -20%;
+    left: -19%;
     top: 0%;
     height: 100%;
     width: 20%;
-    border-style: dotted;
     opacity: 95%;
     filter: blur(5px);
     background-color: #0D8FAD;

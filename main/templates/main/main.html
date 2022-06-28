@@ -1,26 +1,26 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block link %} <link type="text/css" href="{% static 'main/css/Main.css' %}" rel="stylesheet" />{% endblock link %}
+{% block link %} <link type="text/css" href="{% static 'main/css/main.css' %}" rel="stylesheet" />{% endblock link %}
 
 {% block MainContent %}
     <div>
         <div class="Label">Архітектури</div>
         <img class="Icon" src="{% static 'main/images/arch.png' %}"/>
-        <div class="BTN"></div>
+        <a class="BTN" href="{% url 'archlist'%}"><div>Перейти</div></a>
     </div>
 
     <div>
         <div class="Label">Процессори</div>
         <img class="Icon" src="{% static 'main/images/Proc.png' %}"/>
-        <div class="BTN"> fdfds</div>
+        <a class="BTN" href="{% url 'processlist'%}"><div>Перейти</div></a>
 
     </div>
 
     <div>
-        <div class="Label">Категорії</div>
+        <div class="Label">Інше</div>
         <img class="Icon" src="{% static 'main/images/other.png' %}"/>
-        <div class="BTN">fdfds</div>
+        <a class="BTN" href="{% url 'ectlist'%}"><div>Перейти</div></a>
     </div>
 
 

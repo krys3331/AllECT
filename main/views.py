@@ -11,11 +11,7 @@ menu = [
 
 
 def Index(request):
-    about = '''
-    ГОЛОВНА СТОРІНКА
-    '''
-    
-    return render(request, 'main/main.html', {'cathegorys' : Cathegory.objects.all(), 'menu':menu, 'about':about})
+    return render(request, 'main/main.html', {'cathegorys' : Cathegory.objects.all(), 'menu':menu})
 
 
 def About(request):
@@ -36,5 +32,22 @@ def ECTList(request):
 def ECTAdd(request):
     return HttpResponse("ADD")
 
+
+def ArchList(request):
+    
+    arch = Architecture.objects.all()
+    
+    return render(request,'main/archlist.html', {'archl':arch})
+
+def Arch(request, slug):
+    return HttpResponse(f"ARCH:{slug}")
+
+def ProcessorList(request):
+    return HttpResponse("PROC LIST")
+
+def Processor(request, slug):
+    return HttpResponse(f"Proc:{slug}")
+
 def PageNotFound(request, exception):
+    # return render(request, 'main/notfound.html')
     return HttpResponseNotFound("PAGE NOT FOUND")

@@ -1,9 +1,5 @@
-from distutils.command.upload import upload
-from os import name
-from platform import architecture
-from pydoc import describe
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 
 class ECT(models.Model):
@@ -17,6 +13,10 @@ class ECT(models.Model):
     
     def __str__(self) -> str:
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse("ect", kwargs={"slug": self.slug})
+    
 
 class Proccessor(models.Model):
     slug = models.SlugField(unique=True, max_length=64, db_index=True, verbose_name="URL")

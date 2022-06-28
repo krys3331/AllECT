@@ -4,9 +4,7 @@
     margin-left: 1%;
     margin-right: 1%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    
+    grid-template-columns: 1fr 1fr 1fr;   
 }
 
 .MainContent > div 
@@ -33,4 +31,28 @@
     text-align: center;
     margin-top: 1%;
     font-size: 42px;
+}
+
+.BTN
+{
+    margin-top: 5%;
+    font-size: 24px;
+    background-color: #0D8FAD;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.BTN:hover
+{
+    background-color: #0fb0d4;
+}
+
+.BTN > div
+{
+    margin-top: 5%;
 }
