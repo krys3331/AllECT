@@ -1,4 +1,5 @@
 {% load static %}
+{% load main_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
             </div>
             <img class="OtherIcon" src="{% static 'main/images/three_points.png '%}">
             <div class="LeftContent">
+                <div>{% get_cathegorys %}</div>
                 
             </div>
         </div>

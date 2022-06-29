@@ -101,12 +101,11 @@ html,body
 .LeftContent
 {
     position: fixed;
-    left: -19%;
+    left: -19.5%;
     top: 0%;
     height: 100%;
     width: 20%;
     opacity: 95%;
-    filter: blur(5px);
     background-color: #0D8FAD;
     transition: 0.3s ease-out;
 }

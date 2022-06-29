@@ -7,20 +7,20 @@
     <div>
         <div class="Label">Архітектури</div>
         <img class="Icon" src="{% static 'main/images/arch.png' %}"/>
-        <a class="BTN" href="{% url 'archlist'%}"><div>Перейти</div></a>
+        <a class="BTN" href="{% url urls.arch %}"><div>Перейти</div></a>
     </div>
 
     <div>
         <div class="Label">Процессори</div>
         <img class="Icon" src="{% static 'main/images/Proc.png' %}"/>
-        <a class="BTN" href="{% url 'processlist'%}"><div>Перейти</div></a>
+        <a class="BTN" href="{% url urls.proc %}"><div>Перейти</div></a>
 
     </div>
 
     <div>
-        <div class="Label">Інше</div>
+        <div class="Label">Категорії пристроїв</div>
         <img class="Icon" src="{% static 'main/images/other.png' %}"/>
-        <a class="BTN" href="{% url 'ectlist'%}"><div>Перейти</div></a>
+        <a class="BTN" href="{% url urls.cat %}"><div>Перейти</div></a>
     </div>
 
 

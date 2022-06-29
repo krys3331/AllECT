@@ -5,7 +5,7 @@ from main.models import *
 register = template.Library()
 
 @register.simple_tag()
-def get_proccesors():
+def get_processors():
     return Proccessor.objects.all()
 
 @register.simple_tag()
@@ -16,3 +16,6 @@ def get_architectures():
 def get_cathegorys():
     return Cathegory.objects.all()
 
+@register.simple_tag()
+def get_ect():
+    pass

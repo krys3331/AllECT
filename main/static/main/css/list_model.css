@@ -22,14 +22,14 @@
 
 .BTN
 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     background-color: #0D8FAD;
     width: 25%;
     height: 20%;
     border-radius: 15px;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     transition: 0.3s ease;
 }

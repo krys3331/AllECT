@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block link %}<link type="text/css" href="{% static 'main/css/list_model.css' %}" rel="stylesheet"  />{% endblock link %}
+
+{% block title %}<title>{{title}}</title>{% endblock title %}
+
+{% block  MainContent%}
+            {% for obj in list %}
+                <div class="Arch">
+                    <div class="Name">{{obj.name}}</div>
+                    <div class="About">
+                        {% if obj.photo %}<img class="Image" src="{{obj.photo.url}}">{% endif %}
+                        <div class="Descr">{{obj.describe|truncatewords:20}}
+                            <div class="BTN">                                
+                                <a  href="{{ obj.get_absolute_url }}">
+                                    Переглянути опис
+                                </a>
+                            </div>
+                            {% if cathegory %}
+                            <div class="BTN">
+                                <a  href="{% url cathegory obj.slug %}">
+                                    Переглянути приклади
+                                </a>    
+                            </div>  
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if not forloop.last %}
+                        <div class="Line">&nbsp;</div>
+                    {% endif %} 
+                </div>
+            {% endfor %}
+{% endblock MainContent %}
