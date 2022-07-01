@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}<title>Додати</title>{% endblock title %}
+
+{% block link %} <link type="text/css" href="{% static 'main/css/add_choose.css' %}" rel="stylesheet" />{% endblock link %}
+
+{% block MainContent %}
+    <div class="Main">
+        <div class="Block">
+            <div class="Content">
+                <div class="Label">
+                    {{add_menu.0.title}}
+                </div>
+                <img class="Image" src="{% static add_menu.0.img%}" alt=""/>
+                <a class="BTN" href="{% url add_name add_menu.0.slug %}"><div>Додати</div></a>
+            </div>
+            <div class="Content">
+                <div class="Label">
+                    {{add_menu.1.title}}
+                </div>
+                <img class="Image" src="{% static add_menu.1.img%}" alt=""/>
+                <a class="BTN" href="{% url add_name add_menu.1.slug %}"><div>Додати</div></a>
+            </div>
+        </div>
+        <div class="Block">
+            <div class="Content">
+                <div class="Label">
+                    {{add_menu.2.title}}
+                </div>
+                <img class="Image" src="{% static add_menu.2.img %}" alt=""/>
+                <a class="BTN" href="{% url add_name add_menu.2.slug %}"><div>Додати</div></a>
+            </div>
+            <div class="Content">
+                <div class="Label">
+                    {{add_menu.3.title}}
+                </div>
+                <img class="Image" src="{% static add_menu.3.img %}" alt=""/>
+                <a class="BTN" href="{% url add_name add_menu.3.slug %}"><div>Додати</div></a>
+            </div>
+        </div>
+    </div>
+{% endblock MainContent %}

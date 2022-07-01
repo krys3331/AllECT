@@ -1,0 +1,54 @@
+.Main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.Block
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.Content
+{
+    text-align: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+.Label
+{
+    font-size: 42px;
+}
+
+.Image
+{
+    width: 60%;
+}
+
+.BTN
+{
+    width: 50%;
+    height: auto;
+    margin-top: 5%;
+    font-size: 24px;
+    background-color: #0D8FAD;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.BTN:hover
+{
+    background-color: #0fb0d4;
+}
+
+.BTN > div
+{
+    margin-top: 5%;
+}

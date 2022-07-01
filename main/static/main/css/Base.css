@@ -114,10 +114,58 @@ html,body
 {
     left:0%;
 }
+
+.LeftContent > div
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.LeftContent > div > a
+{
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .DownContent
 {
     text-align: center;
     font-size: 32px;
 }
 
+
+.item 
+{
+    position: relative;
+    cursor: pointer;
+}
+
+.item a
+{
+
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    padding: 5px 30px;
+    transition: 0.3s ease;
+    color: white;
+    font-size: 28px;
+
+}
+
+.item a:hover
+{
+    background:rgb(204, 202, 204);
+    
+    color: black;
+}
+
+.sub-menu
+{
+    display: none;
+}
 

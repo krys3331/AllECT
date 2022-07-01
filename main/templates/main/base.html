@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="{% static 'main/css/base.css' %}" rel="stylesheet"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
     {% block link %}{% endblock link %}
     {% block title %}<title>Головна сторінка</title>{% endblock title %}
 </head>
@@ -19,15 +21,28 @@
                     <a href="{% url m.url_page %}">{{m.title}}</a>
                 {% endfor %}    
             </div>
-            <img class="OtherIcon" src="{% static 'main/images/three_points.png '%}">
             <div class="LeftContent">
-                <div>{% get_cathegorys %}</div>
-                
+                <div class="item">
+                    <a class="sub-btn">Опис</a> 
+                    <div class="sub-menu">
+                        {% for m in left_menu %}
+                            <div  class="sub-item"><a href="{% url m.url_page%}">{{m.title}}</a></div> 
+                        {% endfor %}
+                    </div> 
+                </div>
+                <div class="item">
+                    <a class="sub-btn">Додати</a> 
+                    <div class="sub-menu">
+                        {% for m in add_menu %}
+                            <div  class="sub-item"><a href="{% url add_menu_name m.slug %}">{{m.title}}</a></div> 
+                        {% endfor %}
+                    </div> 
+                </div>
             </div>
         </div>
         <div class="MainContent">
             {% block  MainContent%}
-            
+
             {% endblock MainContent %}
             </div>
         </div>
@@ -36,6 +51,6 @@
         </div>
     </div>
    
-
+    <script src="{% static 'main/js/drop.js'%}"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ class ECT(models.Model):
         return self.name
     
     def get_absolute_url(self):
-            return reverse(URL_NAME_ECT, kwargs={"str":self.cathegory.slug,"slug": self.slug})
+            return reverse(URL_ECT, kwargs={"str":self.cathegory.slug,"slug": self.slug})
 
 class Proccessor(models.Model):
     slug = models.SlugField(unique=True, max_length=64, db_index=True, verbose_name="URL")
@@ -29,10 +29,7 @@ class Proccessor(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse(URL_NAME_PROCESSOR, kwargs={"slug": self.slug})
-    
-    
-    
+        return reverse(URL_PROCESSOR, kwargs={"slug": self.slug})
     
 class Architecture(models.Model):
     slug = models.SlugField(unique=True, max_length=64, db_index=True, verbose_name="URL")
@@ -44,7 +41,7 @@ class Architecture(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse(URL_NAME_ARCHITECTURE, kwargs={"slug": self.slug})
+        return reverse(URL_ARCHITECTURE, kwargs={"slug": self.slug})
     
 class Cathegory(models.Model):
     slug = models.SlugField(unique=True, max_length=64, db_index=True, verbose_name="URL")
@@ -56,4 +53,4 @@ class Cathegory(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse(URL_NAME_CATHEGORY, kwargs={"slug": self.slug})
+        return reverse(URL_CATHEGORY, kwargs={"slug": self.slug})
